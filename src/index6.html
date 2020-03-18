@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+	<head>
+        <meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Distortion Effect Ideas for Menu Links | Demo 6 | Codrops</title>
+		<meta name="description" content="Some styles and ideas for decorative link distortion effects using SVG filters." />
+		<meta name="keywords" content="svg filter, animation, javascript, link effect, hover, line, menu" />
+		<meta name="author" content="Codrops" />
+		<link rel="shortcut icon" href="favicon.ico">
+		<link rel="stylesheet" href="https://use.typekit.net/cjc7umy.css">
+		<link rel="stylesheet" type="text/css" href="css/base.css" />
+		<script>document.documentElement.className="js";var supportsCssVars=function(){var e,t=document.createElement("style");return t.innerHTML="root: { --tmp-var: bold; }",document.head.appendChild(t),e=!!(window.CSS&&window.CSS.supports&&window.CSS.supports("font-weight","var(--tmp-var)")),t.parentNode.removeChild(t),e};supportsCssVars()||alert("Please view this demo in a modern browser that supports CSS Variables.");</script>
+		<!--script src="//tympanus.net/codrops/adpacks/analytics.js"></script-->
+	</head>
+	<body class="demo-6">
+		<svg class="hidden">
+			<defs>
+				<filter id="filter-1">
+					<feTurbulence type="fractalNoise" baseFrequency="0" numOctaves="1" result="warp" />
+					<feOffset dx="-90" result="warpOffset" />
+					<feDisplacementMap xChannelSelector="R" yChannelSelector="G" scale="30" in="SourceGraphic" in2="warpOffset" />
+				</filter>
+				<filter id="filter-2">
+					<feTurbulence type="fractalNoise" baseFrequency="0" numOctaves="10" result="warp" />
+					<feOffset dx="-90" result="warpOffset" />
+					<feDisplacementMap xChannelSelector="R" yChannelSelector="G" scale="60" in="SourceGraphic" in2="warpOffset" />
+				</filter>
+				<filter id="filter-3">
+					<feTurbulence type="fractalNoise" baseFrequency="0.15 0.02" numOctaves="3" result="warp" />
+					<feDisplacementMap xChannelSelector="R" yChannelSelector="G" scale="0" in="SourceGraphic" in2="warp" />
+				</filter>
+				<filter id="filter-4">
+					<feTurbulence type="fractalNoise" baseFrequency="0" numOctaves="5" result="warp" />
+					<feOffset dx="-90" result="warpOffset" />
+					<feDisplacementMap xChannelSelector="R" yChannelSelector="G" scale="35" in="SourceGraphic" in2="warpOffset" />
+				</filter>
+				<filter id="filter-5">
+					<feTurbulence type="fractalNoise" baseFrequency="0.01 0.7" numOctaves="5" result="warp" />
+					<feDisplacementMap xChannelSelector="R" yChannelSelector="G" scale="0" in="SourceGraphic" in2="warp" />
+				</filter>
+				<filter id="filter-6">
+					<feTurbulence type="fractalNoise" baseFrequency="0.01 0.07" numOctaves="5" seed="2" result="noise"/>
+					<feDisplacementMap in="SourceGraphic" in2="warp" scale="0" xChannelSelector="R" yChannelSelector="B"/>
+				</filter>
+				<filter id="filter-7">
+					<feTurbulence type="fractalNoise" baseFrequency="0" numOctaves="5" result="warp" />
+					<feDisplacementMap xChannelSelector="R" yChannelSelector="G" scale="90" in="SourceGraphic" in2="warp" />
+				</filter>
+			</defs>
+		</svg>
+		<main>
+			<div class="frame">
+				<h1 class="frame__title">Distortion Effect Ideas for Menu Links</h1>
+				<div class="frame__links">
+					<a href="https://tympanus.net/codrops/?p=48586">Article</a>
+					<a href="https://github.com/codrops/DistortedMenuLinkEffects">GitHub</a>
+				</div>
+				<div class="frame__demos">
+					<a href="index.html">demo 1</a>
+					<a href="index2.html">demo 2</a>
+					<a href="index3.html">demo 3</a>
+					<a href="index4.html">demo 4</a>
+					<a href="index5.html">demo 5</a>
+					<span>demo 6</span>
+				</div>
+			</div>
+			<nav class="menu menu--wave">
+				<a class="menu__link menu__link--1" href="#">About us</a>
+				<a class="menu__link menu__link--2" href="#">Showreel</a>
+				<a class="menu__link menu__link--3" href="#">Portfolio</a>
+				<a class="menu__link menu__link--4" href="#">Case Studies</a>
+				<a class="menu__link menu__link--5" href="#">Our Team</a>
+				<a class="menu__link menu__link--6" href="#">Awards</a>
+				<a class="menu__link menu__link--7" href="#">Contact</a>
+			</nav>
+		</main>
+		<!-- /container -->
+		<script src="js/index.js"></script>
+	</body>
+</html>
